@@ -22,6 +22,7 @@ public class RestaurantController {
 
     @GetMapping
     public Mono<String> searchRestaurants(@RequestParam String query) {
+        System.out.println("API Key: " + apiKey);
         return webClient.get()
                 .uri(uriBuilder -> uriBuilder
                         .queryParam("query", "restaurants " + query) // Prepend "restaurants" to the query
