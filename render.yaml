@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: just-pick-one-backend
+    env: java
+    plan: free
+    buildCommand: "./gradlew build"
+    startCommand: "java -jar build/libs/just-pick-one-0.0.1-SNAPSHOT-plain.jar"
+    envVars:
+      - key: GOOGLE_API_KEY
+        sync: false
