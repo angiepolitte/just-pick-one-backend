@@ -16,7 +16,7 @@ public class CorsConfig implements WebMvcConfigurer {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(List.of("http://localhost:5173"));
+        config.setAllowedOrigins(List.of("https://genuine-churros-6c788c.netlify.app/"));
         config.setAllowedMethods(List.of("GET","POST","PUT","DELETE","OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);                    // <<< must allow cookies
@@ -28,7 +28,7 @@ public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**") // Allow all paths
-                .allowedOrigins("http://localhost:5173") // Allow your frontend's origin
+                .allowedOrigins("https://genuine-churros-6c788c.netlify.app") // Allow your frontend's origin
                 .allowedMethods("GET", "POST", "PUT", "DELETE") // Allow specific HTTP methods
                 .allowCredentials(true); // Allow sending cookies with the request
     }
