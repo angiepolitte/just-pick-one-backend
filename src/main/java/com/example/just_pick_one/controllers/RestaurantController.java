@@ -10,7 +10,8 @@ import reactor.core.publisher.Mono;
 
 @RestController
 @RequestMapping("/api/restaurants")
-@CrossOrigin(origins = "https://genuine-churros-6c788c.netlify.app", allowCredentials = "true")
+@CrossOrigin(origins = "https://forkandfate.com/", allowCredentials = "true")
+//@CrossOrigin(origins = "https://genuine-churros-6c788c.netlify.app", allowCredentials = "true")
 public class RestaurantController {
 
     @Value("${google.api.key}")
